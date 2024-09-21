@@ -33,8 +33,20 @@ const obj4 = {5: "a", 6: "b"}
 
 
 
-console.log(Object.keys(tinderUser));    // Returns all keys  of object 
-console.log(Object.values(tinderUser)); //  Returns all Values  of object
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));    // Returns all keys  of object 
+// console.log(Object.values(tinderUser)); //  Returns all Values  of object
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // .hasOwnProperty it is to check a kes is present in object , Returns True or False
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // .hasOwnProperty it is to check a kes is present in object , Returns True or False
+
+
+let course = {
+    courseName: "JS",
+    price: "999",
+    courseInstructor: "Kashaf"
+}
+// let {courseInstructor} = course
+let {courseInstructor: instructor} = course
+
+// console.log(courseInstructor);
+console.log(instructor);
