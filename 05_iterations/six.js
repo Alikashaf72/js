@@ -37,6 +37,6 @@ const books = [
 ];
 
 let userBook = books.filter( (bk) => bk.genre === "History")
-userBook = books.filter( (bk) => bk.publish >= 1995 && bk.genre === 'History' )
+userBook = books.filter( (bk) => bk.publish >= 1995 && bk.genre === 'Historyf' )
 
 console.log(userBook);
