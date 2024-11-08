@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="icon" href="./img/favicon.png"> -->
     <title>Profile Card</title>
 </head>
 
@@ -57,7 +56,6 @@
     let getData = function(userInputValue){
         let  url = 'https://api.github.com/users/'
         let requestUrl = url + userInputValue 
-        console.log(requestUrl);
         
         const xhr = new XMLHttpRequest();
         xhr.open('GET', requestUrl)
@@ -65,7 +63,6 @@
             console.log(xhr.readyState);
              if (xhr.readyState === 4) {
                 const data = JSON.parse(this.responseText)
-                console.log(data);
                 showCard(data)
             }
         }
@@ -86,12 +83,12 @@
                     </div>
                      <div class="row">
                         <div class="info">
-                            <h3>Following</h3>
-                            <span id="following">120</span>
-                        </div>
-                        <div class="info">
                             <h3>Followers</h3>
                             <span id="followers">5000</span>
+                        </div>
+                        <div class="info">
+                            <h3>Following</h3>
+                            <span id="following">120</span>
                         </div>
                         <div class="info">
                             <h3>Repos</h3>
@@ -109,7 +106,6 @@
     
     
     const addDataInCard = function (data) {
-        console.log(data);
         document.getElementById('dynamicImage').src = data.avatar_url;
         document.getElementById('bio').innerText = data.bio;
         document.getElementById('username').innerText = data.name;
